@@ -1,0 +1,591 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #001233;
+	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	overflow: hidden;
+	position: fixed;
+}
+.main-head{
+	font-family: 'Acme', sans-serif;
+	font-size: 20px;
+
+}
+.sec-head{
+	font-family: 'Acme', sans-serif;
+	font-size: 12px;
+}
+
+/*HEADER STARTS HERE*/
+header{
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+.header-div{
+	margin:0 4% 0 4%;
+	display: flex;
+	height: 100%;
+}
+/*SEARCH BAR STYLING*/
+.header-div input{
+	padding: 5px 5px 5px 35px;
+	height: 30px;
+	width: 300px;
+	box-sizing: border-box;
+	font-family:inherit;
+  	font-size: 14px;
+  	outline: none;
+}
+.header-box1{
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+/*GUITAR IMAGE IN HEADER SECTION STYLING*/
+.header-box1 img{
+	margin-left: 20px;
+	margin-right: 20px;
+	animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+.header-box1 p{
+	text-shadow: 0 0 5px #fff, 
+				0 0 10px #fff, 
+				0 0 15px #0073e6, 
+				0 0 20px #0073e6, 
+				0 0 25px #0073e6, 
+				0 0 30px #0073e6, 
+				0 0 35px #0073e6;
+  animation: blinker 1s linear infinite;
+}
+.header-box2{
+	flex: 1;
+}
+.header-box3{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header-box4{
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*SEARCH BOX FAVICON ICON STYLING*/
+.header-box4 i{
+	position: absolute;
+	padding: 5px 10px 5px 10px;
+	margin-top: 2px; 
+	color: blue;
+	height: 28px;
+	width: 30px;
+}
+.header-box5{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.header-box5 img{
+	margin-bottom: 4px;
+	margin-right: 20px;
+}
+.input-text{
+	border-radius: 15px;
+	border:0;
+}
+/*HEADER ENDS HERE*/
+/*MAIN SECTION STARTS*/
+
+/*CAROUSEL STYLING*/
+.caraousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.caraousel img {
+	height: 100%;
+	width: 90%;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	animation: display 10s infinite;
+}
+.caraousel img:nth-child(2) {
+  animation-delay: 2s;
+}
+.caraousel img:nth-child(3) {
+  animation-delay: 4s;
+}
+.caraousel img:nth-child(4) {
+  animation-delay: 6s;
+}
+.caraousel img:nth-child(5) {
+  animation-delay: 8s;
+}
+/*CAROUSEL STYLING ENDS*/
+main{
+	overflow-y: scroll;
+}
+/*TO HIDE SCROLL BARS OF MAIN CONTAINER AND BODY */
+main::-webkit-scrollbar {
+    display: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+/*BASIC CONTAINER STYLING*/
+.container{
+	margin:60px 3% 0 3%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 3fr 0.1fr 1fr;
+}
+/*LATEST RELEASE SECTION DIVS STYLING*/
+.song-grid{
+	height: 200px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+.song-grid img{
+	vertical-align: top;
+	width:100px;
+	height:100px;
+	float: left;
+}
+/*LATEST RELEASE SECTION INNER DIV*/
+.song-grid-box{
+	margin: 5px;
+	background-color: #001845;
+}
+.song-grid-box span{
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+/*LATEST RELEASE SECTION TEXT CONTENT STYLING*/
+.main-div{
+	display: inline-block;
+	margin: 20px 0 0 15px;
+}
+.main-div p{
+	margin: 5px 0 0 0;
+	font-family: 'Acme', sans-serif;
+}
+/*LATEST RELEASE SECTION ENDS HERE*/
+
+/*POPULAR ARTISTS SECTION STARTS HERE*/
+.artist-grid{
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+#pop-art{
+	margin-top: 50px;
+}
+.artist-grid img{
+	height: 100px;
+	width: 100px;
+	vertical-align: top;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+}
+.artist-grid img:hover {
+    cursor: pointer;
+    border-color: white;
+  	box-shadow: 0px 0px 10px 1px white;
+}
+.artist-grid p{
+	text-align: center;
+}
+/*POPULAR ARTISTS SECTION ENDS HERE*/
+
+/*GENRE DIV WITH 6 MUSIC TYPES STYLING STARTS HERE*/
+.genre-grid{
+	margin-top: 100px;
+	margin-bottom: 70px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	box-sizing: border-box;
+	height: 150px;
+	background-color: #023e8a;
+}
+.genre-grid img{
+	height: 100px;
+	width: 100px;
+	vertical-align: top;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+}
+.genre-grid img:hover {
+    cursor: pointer;
+    border-color: white;
+  	box-shadow: 0px 0px 10px 1px white;
+}
+.genre-grid > div{
+	margin-top: 25px;
+}
+#pos{
+	position: relative;
+	display: block;
+	margin: auto;
+}
+/*ṬO CREATE FIRST PART OF THE GRID ROW*/
+#three{
+	width: 100px;
+	height: 100px;
+	background-color: #001845;
+	position: relative;
+	z-index: 0;
+}
+#two{
+	width: 80px;
+	height: 80px;
+	background-color: #023e7d;
+	position: absolute;
+	z-index: 1;
+	top: 10px;
+	left: 10px;
+}
+#one{
+	width: 60px;
+	height: 60px;
+	background-color:#0466c8;
+	position: absolute;
+	z-index: 2;
+	top: 20px;
+	left: 20px;
+}
+#pos-img{
+	position: absolute;
+	z-index: 3;
+	top: 30px;
+	left: 30px;
+}
+#pos-img img{
+	width: 40px;
+	height: 40px;
+	animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+/*GENRE GRID ENDS HERE*/
+/*GRID OF THREE IMAGES START HERE*/
+.types{
+	margin-bottom: 70px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2%;
+	height: 180px;
+	margin-top: 50px;
+}
+.types img{
+	height: 100%;
+	width: 100%;
+	vertical-align: top;
+}
+/*TYPES GRID ENDS HERE*/
+/*LATEST ENGLISH SONGS SECTION STARTS HERE*/
+.latest-eng{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	height: 160px;
+}
+.latest-eng div{
+	height: 120px;
+	width: 120px;
+	margin: auto;
+}
+.latest-eng img{
+	height: 100%;
+	width: 100%;
+}
+.latest-eng p{
+	font-size: 14px;
+	margin-top: 2px;
+}
+/*LATEST ENGLISH GRID ENDS AND LATEST HINDI STARTS*/
+.latest-hindi{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	height: 160px;
+	margin-bottom: 150px;
+	transition: box-shadow ease-in-out 0.1s;
+}
+.latest-hindi div{
+	height: 120px;
+	width: 120px;
+	margin: auto;
+	transition: box-shadow ease-in-out 0.1s;
+}
+/*EACH SONG HOVER EFFECT*/
+.white-shadow>div:hover{
+  border-color: white;
+  box-shadow: 0px 0px 10px 1px white;
+  cursor: pointer;
+}
+.latest-hindi img{
+	height: 100%;
+	width: 100%;
+}
+.latest-hindi p{
+	margin-top: 2px;
+	font-size: 14px;
+}
+/*LATEST HINDI GRID ENDS HERE*/
+/*ASIDE SECTION STARTS HERE*/
+aside{
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	padding-top: 15px;
+	height: 100%;
+
+}
+aside::-webkit-scrollbar {
+    display: none;
+}
+aside div{
+	height: 80px;
+	margin-top: 10px;
+	background-color: #001845;
+}
+aside img{
+	float: left;
+	width: 80px;
+	height: 80px;
+}
+
+aside div h5{
+    margin: 7px 0 0 7px;
+    font-family: 'Acme', sans-serif;
+	font-size: 15px;
+}
+aside div span{
+	float: right;
+	margin-top: 18px;
+	margin-right: 10px;
+}
+aside div p{
+    font-size: 12px;
+    margin-left: 7px;
+}
+.aside-div{
+	display: inline-block;
+	margin: 0;
+}
+#last-aside{
+	margin-bottom: 145px;
+}
+
+aside i{
+	text-shadow: 0 0 5px #fff, 
+				 0 0 10px #fff, 
+				 0 0 15px #0073e6, 
+				 0 0 20px #0073e6, 
+				 0 0 25px #0073e6, 
+				 0 0 30px #0073e6, 
+				 0 0 35px #0073e6;
+}
+/*ASIDE SECTION ENDS HERE*/
+/*KEYFRAMES FOR ROTATING IMAGE AND GLOW ANIMATION*/
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/*KEYFRAMES FOR CAROUSEL*/
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+/*KEYFRAMES END HERE*/
+/*FOOTER STARTS HERE*/
+footer{
+	height: 60px;
+	width: 100%;
+	background-color: #212529;
+	position: fixed;
+	z-index: 6;
+	left: 0;
+	bottom:0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+}
+.active-song-description {
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* SONG IMAGE STYLING */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+#song-image img {
+	width: 100%;
+	height: 100%;
+	margin-top: 3px;
+}
+/* ICONS STYLING */
+.heart-and-ban-icon {
+	height: 100%;
+	padding-top: 4%;
+}
+.song-desc {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+}
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+}
+/*PLAYER PART*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* SONG TOGGLER */
+.controls {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+.time {
+	margin: 0px 10px;
+}
+.slidecontainer {
+	width: 100%;
+}
+/* AUDIO STYLING */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+.slider:hover {
+	opacity: 1;
+}
+/* DIMENSIONS OF SLIDER */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #007bff;
+	cursor: pointer;
+}
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+/*SOME EXTRA STYLING*/
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/*FOOTER ENDS HERE*/
+/*EXTRA CLASS FOR SHADOW EFFECT*/
+.shadow{
+	box-shadow: 0px 0px 3px 1px #002855;
+}
+/*GROW ON HOVER EFFECT*/
+.grow:hover
+{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+/*GLOW EFFECT CLASS*/
+.glow{
+	text-shadow: 0 0 5px #fff, 
+				 0 0 10px #fff, 
+				 0 0 15px #0073e6, 
+				 0 0 20px #0073e6, 
+				 0 0 25px #0073e6, 
+				 0 0 30px #0073e6, 
+				 0 0 35px #0073e6;
+}
